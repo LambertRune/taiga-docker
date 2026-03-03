@@ -105,6 +105,7 @@ services:
       TAIGA_URL: "${TAIGA_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_WEBSOCKETS_URL: "${WEBSOCKETS_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_SUBPATH: "${SUBPATH}"
+      TAIGA_ENABLE_GITHUB_AUTH: "${ENABLE_GITHUB_AUTH}"
       # ...your customizations go here
     networks:
       - taiga
