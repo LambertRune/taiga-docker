@@ -25,6 +25,7 @@ x-environment:
   # Rabbitmq settings
   RABBITMQ_USER: "${RABBITMQ_USER}"
   RABBITMQ_PASS: "${RABBITMQ_PASS}"
+  RABBITMQ_VHOST: "${RABBITMQ_VHOST}"
   # Telemetry settings
   ENABLE_TELEMETRY: "${ENABLE_TELEMETRY}"
   ENABLE_GITHUB_AUTH: "${ENABLE_GITHUB_AUTH_BACK}"
@@ -120,6 +121,7 @@ services:
     environment:
       RABBITMQ_USER: "${RABBITMQ_USER}"
       RABBITMQ_PASS: "${RABBITMQ_PASS}"
+      RABBITMQ_VHOST: "${RABBITMQ_VHOST}"
       TAIGA_SECRET_KEY: "${SECRET_KEY}"
     networks:
       - taiga
