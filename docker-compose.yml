@@ -107,9 +107,10 @@ services:
       TAIGA_URL: "${TAIGA_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_WEBSOCKETS_URL: "${WEBSOCKETS_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_SUBPATH: "${SUBPATH}"
-      TAIGA_ENABLE_GITHUB_AUTH: "${ENABLE_GITHUB_AUTH_FRONT}"
-      TAIGA_GITHUB_CLIENT_ID: "${GITHUB_API_CLIENT_ID}"
-      TAIGA_PUBLIC_REGISTER_ENABLED: "${PUBLIC_REGISTER_ENABLED_FRONT}"
+      # These exact names are required by the container's config_env_subst.sh script
+      PUBLIC_REGISTER_ENABLED: "${PUBLIC_REGISTER_ENABLED_FRONT}"
+      ENABLE_GITHUB_AUTH: "${ENABLE_GITHUB_AUTH_FRONT}"
+      GITHUB_CLIENT_ID: "${GITHUB_API_CLIENT_ID}"
       # ...your customizations go here
     networks:
       - taiga
